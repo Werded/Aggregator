@@ -1,0 +1,106 @@
+[
+  {
+    "model": "currency.currency",
+    "pk": 1,
+    "fields": {
+      "name": "USD",
+      "belarus_bank_code": "USD"
+    }
+  },
+  {
+    "model": "currency.currency",
+    "pk": 2,
+    "fields": {
+      "name": "EUR",
+      "belarus_bank_code": "EUR"
+    }
+  },
+  {
+    "model": "currency.currency",
+    "pk": 3,
+    "fields": {
+      "name": "GBP",
+      "belarus_bank_code": "GBP"
+    }
+  },
+  {
+    "model": "currency.currency",
+    "pk": 4,
+    "fields": {
+      "name": "RUB",
+      "belarus_bank_code": "RUB"
+    }
+  },
+  {
+    "model": "currency.currency",
+    "pk": 5,
+    "fields": {
+      "name": "CAD",
+      "belarus_bank_code": "CAD"
+    }
+  },
+  {
+    "model": "currency.currency",
+    "pk": 6,
+    "fields": {
+      "name": "PLN",
+      "belarus_bank_code": "PLN"
+    }
+  },
+  {
+    "model": "currency.currency",
+    "pk": 7,
+    "fields": {
+      "name": "SEK",
+      "belarus_bank_code": "SEK"
+    }
+  },
+  {
+    "model": "currency.currency",
+    "pk": 8,
+    "fields": {
+      "name": "UAH",
+      "belarus_bank_code": "UAH"
+    }
+  },
+  {
+    "model": "currency.currency",
+    "pk": 9,
+    "fields": {
+      "name": "CHF",
+      "belarus_bank_code": "CHF"
+    }
+  },
+  {
+    "model": "currency.currency",
+    "pk": 10,
+    "fields": {
+      "name": "JPY",
+      "belarus_bank_code": "JPY"
+    }
+  },
+  {
+    "model": "currency.currency",
+    "pk": 11,
+    "fields": {
+      "name": "CNY",
+      "belarus_bank_code": "CNY"
+    }
+  },
+  {
+    "model": "currency.currency",
+    "pk": 12,
+    "fields": {
+      "name": "CZK",
+      "belarus_bank_code": "CZK"
+    }
+  },
+  {
+    "model": "currency.currency",
+    "pk": 13,
+    "fields": {
+      "name": "NOK",
+      "belarus_bank_code": "NOK"
+    }
+  }
+]

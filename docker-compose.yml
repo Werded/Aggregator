@@ -1,4 +1,4 @@
-version: '1'
+version: '3'
 services:
   postgres:
     image: postgres:latest
@@ -23,6 +23,17 @@ services:
     command: "redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}"
     ports:
       - 6379:6379
+#  app:
+#    build: .
+#    env_file: .env
+#    command: prod
+#    volumes:
+#      - .:/app
+#      - storage:/app/storage
+#    depends_on:
+#      - postgres
+#    ports:
+#      - 8000:8000
 
 
 volumes:

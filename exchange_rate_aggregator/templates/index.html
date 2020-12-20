@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Universal Electric</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"
+          rel="stylesheet">
+    <style>
+        html, body {
+            background-color: #fff;
+            color: #394C59;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300;
+            height: 100vh;
+            margin: 0;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 84px;
+            margin-bottom: 30px;
+        }
+
+        .text {
+            color: #394C59;
+            font-size: 24px;
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        .version {
+            color: #394C59;
+            font-size: 30px;
+            display: block;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<article>
+    <div class="title">
+        Exchange Rate Aggregator API
+    </div>
+    <span class="version">
+        version {{ version }}
+    </span>
+    <a class="text" href="{% url "documentation" %}">
+        Documentation
+    </a>
+</article>
+</body>
+</html>

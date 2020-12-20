@@ -1,6 +1,6 @@
 .PHONY: all fixtures static locale
 
-all: test clean lint
+all: clean lint
 
 lint:
 	mkdir -p reports
@@ -28,6 +28,3 @@ clean:
 	find . -name '*~' -exec rm -f {} +
 	isort .
 	black .
-
-fixtures:
-	python3 manage.py loaddata fixtures/auth.json
