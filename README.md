@@ -10,3 +10,4 @@ To start the project, you need to install dependencies from the requirements.txt
 4. Get history currency rate on date range `api/currency_histories/?currency={currency id}&date_range_after={custom date}&date_range_before={custom date}`
 5. Create User `api/users/`
 6. Authenticate `auth/token`
+7. Documentation `docs/`
