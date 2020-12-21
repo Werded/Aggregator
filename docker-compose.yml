@@ -29,6 +29,15 @@ services:
     ports:
       - 8000:8000
 
+  celery_app:
+    build: .
+    env_file: .env
+    command: celery
+    volumes:
+      - .:/app
+      - storage:/app/storage
+    depends_on:
+      - rabbitmq
 
 volumes:
   storage:
