@@ -1,9 +1,6 @@
 """Users app serializers"""
 from typing import Any, Dict, List, Type
 
-from django.contrib.auth.hashers import make_password
-from django.contrib.auth.password_validation import validate_password
-
 from rest_framework import serializers
 
 from exchange_rate_aggregator.users.models import User
@@ -27,9 +24,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data: dict) -> User:
         """Create users."""
-        return User.objects.create_user(**validated_data)
-
-    def validate_password(self, password: str) -> str:
-        """Validate Password"""
-        validate_password(password)
-        return make_password(password)
+        instance: User = super().create(validated_data)
+        instance.set_password(validated_data["password"])
+        instance.save()
+        return instance

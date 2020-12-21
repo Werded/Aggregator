@@ -17,23 +17,17 @@ services:
     ports:
       - 5672:5672
       - 15672:15672
-  redis:
-    image: library/redis:latest
+  app:
+    build: .
     env_file: .env
-    command: "redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}"
+    command: prod
+    volumes:
+      - .:/app
+      - storage:/app/storage
+    depends_on:
+      - postgres
     ports:
-      - 6379:6379
-#  app:
-#    build: .
-#    env_file: .env
-#    command: prod
-#    volumes:
-#      - .:/app
-#      - storage:/app/storage
-#    depends_on:
-#      - postgres
-#    ports:
-#      - 8000:8000
+      - 8000:8000
 
 
 volumes:
