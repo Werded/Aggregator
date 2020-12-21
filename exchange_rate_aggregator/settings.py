@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 from datetime import timedelta
 from typing import Any, Dict, List, Optional, Tuple, Union
-
+from distutils.util import strtobool
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -22,12 +22,12 @@ BASE_DIR: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY: str = "^n1ytsyny**0h^6w1argklg$u^6rq+=e!ltf#l05c3ykl74c#+"
+SECRET_KEY: str = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG: bool = True
+DEBUG: bool = strtobool(os.getenv("DEBUG"))
 
-ALLOWED_HOSTS: List[str] = ["*"]
+ALLOWED_HOSTS: List[str] = os.getenv("ALLOWED_HOSTS", "").split(",")
 
 
 # Application definition
