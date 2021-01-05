@@ -19,7 +19,6 @@ static:
 	python3 manage.py collectstatic --noinput
 
 migrate:
-	python3 manage.py makemigrations
 	python3 manage.py migrate
 
 clean:
