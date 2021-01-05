@@ -19,6 +19,8 @@ prepare() {
 case "$1" in
 prod)
   prepare
+  make migrate
+  make fixture
   uwsgi --ini uwsgi.ini
   ;;
 celery)
